@@ -1,70 +1,181 @@
-# Getting Started with Create React App
+# Mi Emisoras - Aplicación de Radio y Podcasts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación móvil moderna para escuchar radio y podcasts, diseñada con React y un enfoque en la experiencia de usuario.
 
-## Available Scripts
+## 🎵 Características
 
-In the project directory, you can run:
+### 📱 Pantalla Principal (Home)
+- **Header personalizado** con logo "Mi emisoras" y perfil de usuario
+- **Mensaje de bienvenida** personalizado
+- **Categorías de contenido** (Podcast, Deportes, Teatro, Entretenimiento)
+- **Sección de recomendados** con tarjetas interactivas
+- **Sección de tendencias** con contenido popular
+- **Navegación inferior** con iconos intuitivos
 
-### `npm start`
+### 🎧 Reproductor de Audio
+- **Artwork personalizado** con diseño de estación de radio
+- **Controles de reproducción** (play/pause, retroceder 15s, adelantar 30s)
+- **Barra de progreso** con tiempo actual y total
+- **Información del programa** con título y descripción
+- **Botón de conectar dispositivo** para streaming
+- **Navegación fluida** entre pantallas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔍 Pantalla de Búsqueda
+- **Barra de búsqueda** con placeholder atractivo
+- **Categorías de búsqueda** organizadas
+- **Teclado virtual** funcional con diseño Google
+- **Búsqueda por voz** integrada
+- **Navegación intuitiva** con botones de retorno
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Tecnologías Utilizadas
 
-### `npm test`
+- **React 18** - Framework principal
+- **CSS3** - Estilos modernos y responsivos
+- **JavaScript ES6+** - Funcionalidad interactiva
+- **Emojis** - Iconografía nativa para mejor rendimiento
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Instalación y Ejecución
 
-### `npm run build`
+### Prerrequisitos
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pasos de instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clonar el repositorio**
+   ```bash
+   git clone [URL_DEL_REPOSITORIO]
+   cd emisora
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Ejecutar en modo desarrollo**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Abrir en el navegador**
+   ```
+   http://localhost:3000
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Scripts disponibles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `npm start` - Ejecuta la aplicación en modo desarrollo
+- `npm test` - Ejecuta las pruebas
+- `npm run build` - Construye la aplicación para producción
+- `npm run eject` - Expone la configuración de webpack (irreversible)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Diseño y UX
 
-## Learn More
+### Paleta de Colores
+- **Primario**: #ff4444 (Rojo)
+- **Secundario**: #0066cc (Azul)
+- **Neutro**: #f5f5f5 (Gris claro)
+- **Texto**: #000000 (Negro) / #666666 (Gris)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Tipografía
+- **Familia**: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto
+- **Tamaños**: 12px - 28px según jerarquía
+- **Pesos**: 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Interacciones
+- **Hover effects** en botones y tarjetas
+- **Transiciones suaves** (0.2s - 0.3s)
+- **Animaciones de entrada** para nuevas pantallas
+- **Feedback visual** en interacciones
 
-### Code Splitting
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+La aplicación está optimizada para:
+- **Móviles**: 320px - 480px
+- **Tablets**: 481px - 768px
+- **Desktop**: 769px+
 
-### Analyzing the Bundle Size
+### Breakpoints principales
+```css
+@media (max-width: 480px) {
+  /* Estilos para móviles */
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Estructura del Proyecto
 
-### Making a Progressive Web App
+```
+emisora/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── components/
+│   │   ├── Home.js          # Pantalla principal
+│   │   ├── Home.css
+│   │   ├── Reproductor.js   # Reproductor de audio
+│   │   ├── Reproductor.css
+│   │   ├── Search.js        # Pantalla de búsqueda
+│   │   └── Search.css
+│   ├── App.js              # Componente principal
+│   ├── App.css             # Estilos globales
+│   ├── index.js            # Punto de entrada
+│   └── index.css           # Estilos base
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎯 Funcionalidades Implementadas
 
-### Advanced Configuration
+### Navegación
+- ✅ Navegación entre pantallas
+- ✅ Botones de retorno funcionales
+- ✅ Navegación inferior interactiva
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Interactividad
+- ✅ Tarjetas de contenido clickeables
+- ✅ Controles de reproducción
+- ✅ Búsqueda por texto
+- ✅ Categorías seleccionables
 
-### Deployment
+### Diseño
+- ✅ Diseño fiel a las imágenes de referencia
+- ✅ Colores y tipografía exactos
+- ✅ Layout responsivo
+- ✅ Animaciones suaves
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔮 Próximas Mejoras
 
-### `npm run build` fails to minify
+- [ ] Integración con API de radio real
+- [ ] Reproducción de audio real
+- [ ] Sistema de favoritos
+- [ ] Notificaciones push
+- [ ] Modo offline
+- [ ] Temas personalizables
+- [ ] Integración con redes sociales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👥 Contribución
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📞 Contacto
+
+Para preguntas o soporte, contacta a:
+- **Email**: [tu-email@ejemplo.com]
+- **GitHub**: [tu-usuario-github]
+
+---
+
+**¡Disfruta escuchando tu música favorita con Mi Emisoras! 🎵**
